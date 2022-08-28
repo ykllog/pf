@@ -400,7 +400,7 @@ th {
 
 body {
   font-size: 1rem;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Montserrat", "Zen Maru Gothic", sans-serif;
   color: #313333;
   background-color: #fff;
   line-height: 1;
@@ -1011,4 +1011,86 @@ a,
 }
 .indexMain_works .works_item a figure figcaption p:last-child {
   font-size: 0.75rem;
+}
+
+.indexMain_contact .contact {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.indexMain_contact .contact_message {
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+.indexMain_contact .contact_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .indexMain_contact .contact_item {
+    display: block;
+  }
+}
+.indexMain_contact .contact_item:last-child {
+  margin-bottom: 50px;
+}
+.indexMain_contact .contact_item label {
+  width: 300px;
+  display: block;
+  cursor: none;
+}
+@media screen and (max-width: 768px) {
+  .indexMain_contact .contact_item label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+.indexMain_contact .contact_item input,
+.indexMain_contact .contact_item textarea {
+  width: calc(100% - 300px);
+  padding: 0.5rem 1rem;
+}
+@media screen and (max-width: 768px) {
+  .indexMain_contact .contact_item input,
+.indexMain_contact .contact_item textarea {
+    width: 100%;
+  }
+}
+.indexMain_contact .contact_item input {
+  height: 3rem;
+  border-bottom: 1px solid #313333;
+}
+.indexMain_contact .contact_item textarea {
+  height: 10rem;
+  resize: vertical;
+  border: 1px solid #313333;
+}
+.indexMain_contact .contact_item ::-moz-placeholder {
+  color: rgba(112, 112, 112, 0.5);
+}
+.indexMain_contact .contact_item ::placeholder {
+  color: rgba(112, 112, 112, 0.5);
+}
+.indexMain_contact .contact_submit {
+  width: 300px;
+  height: 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #D66841;
+}
+@media (hover: hover) {
+  .indexMain_contact .contact_submit:hover {
+    opacity: 0.5;
+  }
+}
+@media (hover: none) {
+  .indexMain_contact .contact_submit:active {
+    opacity: 0.5;
+  }
 }

@@ -272,3 +272,88 @@
     }
   }
 }
+
+
+//*------------------*
+//*  contact
+//*------------------*
+
+.indexMain_contact {
+  .contact {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    &_message {
+      line-height: 1.5;
+      margin-bottom: 50px;
+    }
+
+    &_item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      line-height: 2;
+      margin-bottom: 30px;
+
+      @include fo.tb-layout {
+        display: block;
+      }
+
+      &:last-child {
+        margin-bottom: 50px;
+      }
+
+      label {
+        width: 300px;
+        display: block;
+        cursor: none;
+
+        @include fo.tb-layout {
+          width: 100%;
+          margin-bottom: .5rem;
+        }
+      }
+
+      input,
+      textarea {
+        width: calc(100% - 300px);
+        padding: .5rem 1rem;
+
+        @include fo.tb-layout {
+          width: 100%;
+        }
+      }
+
+      input {
+        height: 3rem;
+        border-bottom: 1px solid fo.$color-default;
+      }
+
+      textarea {
+        height: 10rem;
+        resize: vertical;
+        border: 1px solid fo.$color-default;
+      }
+
+      ::placeholder {
+        color: rgba(fo.$color-gray, .5);
+      }
+    }
+
+    &_submit {
+      width: 300px;
+      height: 3rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: fo.$color-light;
+      background-color: fo.$color-accent02;
+
+      @include fo.hover {
+        opacity: .5;
+      }
+    }
+  }
+}

@@ -7,7 +7,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Zen+Maru+Gothic:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.min.css">
 
   <title>キッポウ</title>
@@ -171,26 +173,28 @@
         </div>
 
         <div class="contact">
+          <p class="contact_message">各種制作のお見積もりやご依頼・その他ご相談等ありましたら、お気軽にお問い合わせください。<br>3営業日以内にご返信いたします。</p>
           <form class="contact_form">
             <ul class="contact_list">
               <li class="contact_item">
-                <label for="company">貴社名</label>
-                <input type="text" id="company" placeholder="キッポウ">
+                <label for="company" class="cursorNone">貴社名</label>
+                <input type="text" id="company" placeholder="キッポウ" class="cursorNone">
               </li>
               <li class="contact_item">
-                <label for="name">お名前<span class="contact_item_required">*</span></label>
-                <input type="text" id="name" placeholder="伊藤宏恵" required>
+                <label for="name" class="cursorNone">お名前<span class="colorRed">（必須）</span></label>
+                <input type="text" id="name" placeholder="伊藤宏恵" class="cursorNone" required>
               </li>
               <li class="contact_item">
-                <label for="mail">メールアドレス<span class="contact_item_required">*</span></label>
-                <input type="email" id="mail" placeholder="sample@example.com" required>
+                <label for="mail" class="cursorNone">メールアドレス<span class="colorRed">（必須）</span></label>
+                <input type="email" id="mail" placeholder="sample@example.com" class="cursorNone" required>
               </li>
               <li class="contact_item">
-                <label for="message">メッセージ</label>
-                <textarea type="text" id="message" placeholder="問い合わせ内容を入力してください。" required></textarea>
+                <label for="message" class="cursorNone">メッセージ<span class="colorRed">（必須）</span></label>
+                <textarea type="text" id="message" placeholder="問い合わせ内容を入力してください。" class="cursorNone"
+                  required></textarea>
               </li>
             </ul>
-            <input type="submit" class="contact_submit" value="送信する">
+            <input type="submit" class="contact_submit cursorNone" value="送信する">
           </form>
         </div>
       </section>
