@@ -490,7 +490,6 @@ dt {
 }
 
 .header {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -499,14 +498,13 @@ dt {
   background: linear-gradient(to bottom, #FBEFEB, #fff 20%, transparent);
   z-index: 10;
 }
-.header.fixed {
-  display: block;
-}
 @media screen and (max-width: 768px) {
   .header {
-    display: block;
     background-color: #fff;
   }
+}
+.header.fixed .header_siteTitle {
+  visibility: visible;
 }
 .header_inner {
   display: flex;
@@ -522,6 +520,7 @@ dt {
   }
 }
 .header_siteTitle {
+  visibility: hidden;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -814,6 +813,92 @@ a,
   width: 80px;
   height: 80px;
   background: rgba(218, 58, 36, 0.5);
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scrollDown span {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: #313333;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  writing-mode: vertical-rl;
+}
+.scrollDown:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #313333;
+  -webkit-animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+          animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+}
+@-webkit-keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+@-webkit-keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.scrollDown:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 50px;
+  background: #313333;
+}
+@media screen and (max-width: 400px) {
+  .scrollDown {
+    display: none;
+  }
 }
 
 .indexMain_section {

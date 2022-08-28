@@ -6,7 +6,6 @@
 //*------------------*
 
 .header {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,13 +14,14 @@
   background: linear-gradient(to bottom, fo.$color-accent03, fo.$color-light 20%, transparent);
   @include fo.z-index(header);
 
-  &.fixed {
-    display: block;
+  @include fo.tb-layout {
+    background-color: fo.$color-light;
   }
 
-  @include fo.tb-layout {
-    display: block;
-    background-color: fo.$color-light;
+  &.fixed {
+    .header_siteTitle {
+      visibility: visible;
+    }
   }
 
   &_inner {
@@ -38,6 +38,7 @@
   }
 
   &_siteTitle {
+    visibility: hidden;
     width: fit-content;
     height: 50px;
 
