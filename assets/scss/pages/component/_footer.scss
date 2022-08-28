@@ -16,6 +16,13 @@ $sns-colors: (
   padding: 75px 0 10px;
   background-color: fo.$color-accent03;
 
+  &_logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
   .address {
     margin-bottom: 50px;
 
@@ -51,11 +58,29 @@ $sns-colors: (
     right: 25px;
     width: 50px;
     height: 50px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: fo.$color-accent03;
+      border-radius: 50%;
+      box-shadow: 0 0 2px rgba(fo.$color-gray, .5);
+      width: 100%;
+      height: 100%;
+
+      svg {
+        width: 50%;
+        height: 50%;
+
+        fill: fo.$color-accent01;
+      }
+    }
   }
 
   .copyright {
     display: block;
     text-align: center;
-    font-size: fo.rem(10);
+    font-size: fo.rem(12);
   }
 }

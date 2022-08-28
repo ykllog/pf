@@ -24,6 +24,7 @@
 
   @include fo.sm-layout {
     height: 60vh;
+    margin-top: 10vh;
   }
 
   &_inner {
@@ -66,12 +67,10 @@
     }
 
     .--title {
-      color: fo.$color-accent01;
-      font-size: fo.rem(50);
-      letter-spacing: 1.25;
+      width: 350px;
 
       @include fo.sm-layout {
-        font-size: fo.rem(28);
+        width: 250px;
       }
     }
   }
