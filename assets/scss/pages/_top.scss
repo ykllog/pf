@@ -141,6 +141,7 @@
       }
 
       &_text {
+        line-height: 1.5;
         margin-bottom: 75px;
 
         p:not(:last-child) {
@@ -155,6 +156,47 @@
         margin: 0 0 0 auto;
         padding-left: 30px;
         background: url(../images/moreLink.svg) no-repeat center bottom / contain;
+      }
+    }
+  }
+}
+
+
+//*------------------*
+//*  skills
+//*------------------*
+
+.indexMain_skills {
+  .skills {
+    &_menu {
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: fo.$color-accent03;
+      text-align: center;
+      margin-bottom: 50px;
+      padding: 2rem 0;
+      line-height: 2;
+    }
+
+    &_list {
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      padding-left: 1rem;
+      line-height: 2;
+      list-style-type: disc;
+    }
+
+    &_message {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+
+      p {
+        line-height: 1.5;
+        margin-bottom: 1rem;
       }
     }
   }

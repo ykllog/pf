@@ -910,6 +910,7 @@ a,
   margin-bottom: 50px;
 }
 .indexMain_about .about_discription_text {
+  line-height: 1.5;
   margin-bottom: 75px;
 }
 .indexMain_about .about_discription_text p:not(:last-child) {
@@ -922,4 +923,33 @@ a,
   margin: 0 0 0 auto;
   padding-left: 30px;
   background: url(../images/moreLink.svg) no-repeat center bottom/contain;
+}
+
+.indexMain_skills .skills_menu {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #FBEFEB;
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 2rem 0;
+  line-height: 2;
+}
+.indexMain_skills .skills_list {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding-left: 1rem;
+  line-height: 2;
+  list-style-type: disc;
+}
+.indexMain_skills .skills_message {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.indexMain_skills .skills_message p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
