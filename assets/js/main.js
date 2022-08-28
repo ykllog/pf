@@ -52,6 +52,38 @@ if (splash_text != myYear + myMonth + myDate) {
 }
 
 
+//*  スティッキーヘッダー
+//*------------------------------------*
+$(function () {
+  let $win = $(window),
+    $fv = $('.indexMain_fv'),
+    $header = $('.header'),
+    fvHeight = $fv.outerHeight(),
+    fixedClass = 'fixed';
+  $win.on('load scroll', function () {
+    let value = $(this).scrollTop();
+    if ($win.width() > 768) {
+      if (value > fvHeight) {
+        $header.addClass(fixedClass);
+      } else {
+        $header.removeClass(fixedClass);
+      }
+    }
+  });
+});
+
+
+//*  ハンバーガーメニュー
+//*------------------------------------*
+
+$(function () {
+  $('.header_hamburger').on('click', function () {
+    $('.header_hamburger, .header_nav').toggleClass('open');
+    $('body').toggleClass('noScroll');
+  });
+});
+
+
 //*  ページ内リンク時スクロール
 //*------------------------------------*
 
