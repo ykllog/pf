@@ -77,7 +77,7 @@ $(function () {
 //*------------------------------------*
 
 $(function () {
-  $('.header_hamburger').on('click', function () {
+  $('.header_hamburger, .header_nav_item').on('click', function () {
     $('.header_hamburger, .header_nav').toggleClass('open');
     $('body').toggleClass('noScroll');
   });

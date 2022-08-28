@@ -1,105 +1,161 @@
 @use '../foundation' as fo;
 
-.indexMain {
 
-  //*------------------*
-  //*  fv
-  //*------------------*
+//*------------------*
+//*  共通部分
+//*------------------*
 
-  &_fv {
+.indexMain_section {
+  margin-bottom: 150px;
+}
+
+
+//*------------------*
+//*  fv
+//*------------------*
+
+.indexMain_fv {
+  width: 100%;
+  height: 100vh;
+
+  @include fo.sm-layout {
+    height: 60vh;
+  }
+
+  &_inner {
+    width: 95%;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_content {
     width: 100%;
-    height: 100vh;
+    height: 60vh;
+    position: relative;
+  }
+
+  &_copy {
+    height: 100%;
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     @include fo.sm-layout {
-      height: 60vh;
-    }
-
-    &_inner {
-      width: 95%;
-      max-width: 1000px;
-      height: 100%;
-      margin: 0 auto;
-      display: flex;
+      padding-bottom: 0;
       justify-content: center;
-      align-items: center;
     }
 
-    &_content {
-      width: 100%;
-      height: 60vh;
-      position: relative;
-    }
-
-    &_copy {
-      height: 100%;
-      padding-bottom: 10vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+    .--sub {
+      color: fo.$color-accent02;
+      font-size: fo.rem(28);
+      line-height: 1.5;
+      margin-bottom: 30px;
 
       @include fo.sm-layout {
-        padding-bottom: 0;
-        justify-content: center;
+        font-size: fo.rem(20);
       }
+    }
 
-      .--sub {
-        color: fo.$color-accent02;
+    .--title {
+      color: fo.$color-accent01;
+      font-size: fo.rem(50);
+      letter-spacing: 1.25;
+
+      @include fo.sm-layout {
         font-size: fo.rem(28);
-        line-height: 1.5;
-        margin-bottom: 30px;
-
-        @include fo.sm-layout {
-          font-size: fo.rem(20);
-        }
-      }
-
-      .--title {
-        color: fo.$color-accent01;
-        font-size: fo.rem(50);
-        letter-spacing: 1.25;
-
-        @include fo.sm-layout {
-          font-size: fo.rem(28);
-        }
-      }
-    }
-
-    &_logo {
-      position: absolute;
-      top: 0;
-      right: 0;
-      @include fo.z-index(fv_logo);
-
-      @include fo.sm-layout {
-        top: 50%;
-        right: auto;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      svg {
-        width: auto;
-        height: 60vh;
-
-        @include fo.sm-layout {
-          width: 90vw;
-          height: auto;
-        }
-
-        path,
-        circle {
-          fill: fo.$color-accent03;
-        }
       }
     }
   }
 
+  &_logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include fo.z-index(fv_logo);
+
+    @include fo.sm-layout {
+      top: 50%;
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    svg {
+      width: auto;
+      height: 60vh;
+
+      @include fo.sm-layout {
+        width: 90vw;
+        height: auto;
+      }
+
+      path,
+      circle {
+        fill: fo.$color-accent03;
+      }
+    }
+  }
+}
 
 
+//*------------------*
+//*  about
+//*------------------*
 
+.indexMain_about {
+  .about {
+    &_pic {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
+      @include fo.tb-layout {
+        display: block;
+      }
 
+      img {
+        display: block;
+        width: 90%;
+        max-width: 450px;
+        margin-right: 50px;
 
+        @include fo.tb-layout {
+          margin: 0 auto 75px;
+        }
+      }
+    }
 
+    &_discription {
+      &_title {
+        font-size: fo.rem(28);
+        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: 1.5;
+        color: fo.$color-accent01;
+        margin-bottom: 50px;
+      }
 
+      &_text {
+        margin-bottom: 75px;
+
+        p:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      &_more a {
+        display: block;
+        width: 320px;
+        height: 50px;
+        margin: 0 0 0 auto;
+        padding-left: 30px;
+        background: url(../images/moreLink.svg) no-repeat center bottom / contain;
+      }
+    }
+  }
 }

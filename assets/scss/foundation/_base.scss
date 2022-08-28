@@ -94,7 +94,7 @@ a {
   color: $color-accent02;
 
   @include hover {
-    color: $color-accent03;
+    opacity: .5;
   }
 }
 

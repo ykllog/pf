@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'base' as fo;
 
 
 //*------------------*
@@ -27,4 +27,32 @@ $layer: (
   width: 95%;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+
+//*------------------*
+//*  要素共通タイトル
+//*------------------*
+
+.sectionTitle {
+  margin-bottom: 100px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_main {
+    font-size: fo.rem(50);
+    font-weight: bold;
+    letter-spacing: 1.5;
+    color: fo.$color-accent03;
+  }
+
+  &_sub {
+    margin-top: -1rem;
+    font-weight: bold;
+    letter-spacing: 1.5;
+    color: fo.$color-accent01;
+  }
 }
