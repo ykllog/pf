@@ -1,0 +1,156 @@
+@use '../../foundation' as fo;
+
+
+//*------------------*
+//*  header
+//*------------------*
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, fo.$color-accent03, fo.$color-light 20%, transparent);
+  @include fo.z-index(header);
+
+  @include fo.tb-layout {
+    background-color: fo.$color-light;
+  }
+
+  &.fixed {
+    .header_siteTitle {
+      visibility: visible;
+    }
+  }
+
+  &_inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    @include fo.tb-layout {
+      display: block;
+      padding: 10px 0 0;
+    }
+  }
+
+  &_siteTitle {
+    visibility: hidden;
+    width: fit-content;
+    height: 50px;
+
+    @include fo.sm-layout {
+      height: 30px;
+    }
+  }
+
+  &_hamburger {
+    display: none;
+
+    @include fo.tb-layout {
+      display: block;
+
+      &_button {
+        position: fixed;
+        top: 20px;
+        right: 10px;
+        width: 40px;
+        height: 28px;
+        @include fo.z-index(hamburger);
+
+        @include fo.sm-layout {
+          top: 10px;
+          width: 30px;
+        }
+      }
+
+      &_line {
+        display: block;
+        background-color: fo.$color-accent01;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 12px;
+        }
+
+        &:nth-child(3) {
+          top: 24px;
+        }
+      }
+
+      &.open {
+        span {
+          &:nth-child(1) {
+            top: 10px;
+            transform: rotate(45deg);
+          }
+
+          &:nth-child(2) {
+            width: 0;
+          }
+
+          &:nth-child(3) {
+            top: 10px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  &_nav {
+    &_list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &_item {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+
+      a {
+        color: fo.$color-default;
+
+        @include fo.hover {
+          color: fo.$color-accent01;
+        }
+      }
+    }
+
+    @include fo.tb-layout {
+      display: none;
+      width: 100%;
+      height: 100vh;
+
+      &_list {
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 20vh;
+      }
+
+      &_item {
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+      }
+
+      &.open {
+        display: block;
+      }
+    }
+  }
+}
