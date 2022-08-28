@@ -457,6 +457,12 @@ dt {
   color: #DA3A24;
 }
 
+.maxWidth {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .header {
   display: none;
   position: fixed;
@@ -481,9 +487,6 @@ dt {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
-  max-width: 1100px;
-  margin: 0 auto;
   padding: 20px 0;
 }
 @media screen and (max-width: 768px) {
@@ -584,7 +587,6 @@ dt {
     display: none;
     width: 100%;
     height: 100vh;
-    z-index: 10;
   }
   .header_nav_list {
     flex-direction: column;
@@ -765,4 +767,90 @@ a,
   width: 80px;
   height: 80px;
   background: rgba(218, 58, 36, 0.5);
+}
+
+.indexMain_fv {
+  width: 100%;
+  height: 100vh;
+}
+@media screen and (max-width: 400px) {
+  .indexMain_fv {
+    height: 60vh;
+  }
+}
+.indexMain_fv_inner {
+  width: 95%;
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.indexMain_fv_content {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+}
+.indexMain_fv_copy {
+  height: 100%;
+  padding-bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 400px) {
+  .indexMain_fv_copy {
+    padding-bottom: 0;
+    justify-content: center;
+  }
+}
+.indexMain_fv_copy .--sub {
+  color: #D66841;
+  font-size: 1.75rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 400px) {
+  .indexMain_fv_copy .--sub {
+    font-size: 1.25rem;
+  }
+}
+.indexMain_fv_copy .--title {
+  color: #DA3A24;
+  font-size: 3.125rem;
+  letter-spacing: 1.25;
+}
+@media screen and (max-width: 400px) {
+  .indexMain_fv_copy .--title {
+    font-size: 1.75rem;
+  }
+}
+.indexMain_fv_logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+@media screen and (max-width: 400px) {
+  .indexMain_fv_logo {
+    top: 50%;
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.indexMain_fv_logo svg {
+  width: auto;
+  height: 60vh;
+}
+@media screen and (max-width: 400px) {
+  .indexMain_fv_logo svg {
+    width: 90vw;
+    height: auto;
+  }
+}
+.indexMain_fv_logo svg path,
+.indexMain_fv_logo svg circle {
+  fill: #FBEFEB;
 }
