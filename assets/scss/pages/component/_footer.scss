@@ -1,6 +1,61 @@
 @use '../../foundation' as fo;
 
+$sns-colors: (
+  twitter: #1b95e0,
+  github: fo.$color-gray,
+  blog: fo.$color-accent01,
+);
+
 
 //*------------------*
 //*  footer
 //*------------------*
+
+.footer {
+  width: 100%;
+  padding: 75px 0 10px;
+  background-color: fo.$color-accent03;
+
+  .address {
+    margin-bottom: 50px;
+
+    &_list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &_item {
+      width: 50px;
+      height: 50px;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      @each $key,
+      $value in $sns-colors {
+        .--#{$key} {
+          @include fo.hover {
+            fill: $value;
+          }
+        }
+      }
+    }
+  }
+
+  .pageTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .copyright {
+    display: block;
+    text-align: center;
+    font-size: fo.rem(10);
+  }
+}

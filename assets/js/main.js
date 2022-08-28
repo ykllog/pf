@@ -1,6 +1,5 @@
-//*------------------*
 //*  マウスカーソル
-//*------------------*
+//*------------------------------------*
 
 let userAgent = navigator.userAgent;
 if (userAgent.indexOf("iPhone") >= 0 || userAgent.indexOf("iPad") >= 0 || userAgent.indexOf("Android") >= 0) {
@@ -22,10 +21,8 @@ if (userAgent.indexOf("iPhone") >= 0 || userAgent.indexOf("iPad") >= 0 || userAg
 }
 
 
-
-//*------------------*
 //*  ローディング画面
-//*------------------*
+//*------------------------------------*
 
 let splash_text = $.cookie('accessdate');
 let myD = new Date();
@@ -53,3 +50,34 @@ if (splash_text != myYear + myMonth + myDate) {
 } else {
   $('.loading').css('display', 'none');
 }
+
+
+//*  ページ内リンク時スクロール
+//*------------------------------------*
+
+$(function () {
+  $('a[href^="#"]').click(function () {
+    let time = 500;
+    let href = $(this).attr("href");
+    let target = $(href == "#" ? 'html' : href);
+    let distance = target.offset().top;
+    $("html, body").animate({ scrollTop: distance }, time, "swing");
+    return false;
+  });
+});
+
+
+//*  トップに戻るリンク
+//*------------------------------------*
+
+$(function () {
+  let pagetop = $('.pageTop');
+  pagetop.hide();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      pagetop.fadeIn();
+    } else {
+      pagetop.fadeOut();
+    }
+  });
+});
