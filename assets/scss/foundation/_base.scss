@@ -1,0 +1,115 @@
+@use "sass:math";
+
+
+//*------------------*
+//*  color定義
+//*------------------*
+
+$color-default: #192643;
+$color-light: #fff;
+$color-blue01: #18b7cd;
+$color-blue02: #1b8ef3;
+$color-blue03: #bbdbf3;
+$color-red: #da532c;
+
+
+//*------------------*
+//*  font定義
+//*------------------*
+
+//font-family
+$font-main: 'Noto Sans JP', sans-serif;
+
+//font-size
+@function rem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+
+//*------------------*
+//*  レスポンシブ定義
+//*------------------*
+
+@mixin tb-layout($width: 768px) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin sm-layout($width: 400px) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+
+//*------------------*
+//*  共通定義
+//*------------------*
+
+body {
+  font-size: rem(16);
+  font-family: $font-main;
+  color: $color-default;
+  background-color: $color-light;
+  line-height: 1;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+input,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+a {
+  color: $color-blue02;
+
+  @include hover {
+    color: $color-blue03;
+  }
+}
+
+dt {
+  font-weight: normal;
+}
+
+.br {
+  display: inline-block;
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
+.colorRed {
+  color: $color-red;
+}
