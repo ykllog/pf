@@ -456,3 +456,106 @@ dt {
 .colorRed {
   color: #DA3A24;
 }
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.loading_spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  z-index: 105;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading_cube1, .loading_cube2 {
+  background-color: #D66841;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: cubeMove 1.8s infinite ease-in-out;
+  animation: cubeMove 1.8s infinite ease-in-out;
+}
+.loading_cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+
+@-webkit-keyframes cubeMove {
+  25% {
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@keyframes cubeMove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  }
+  50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+html,
+body,
+a,
+.cursorNone {
+  cursor: none;
+}
+
+#cursor {
+  transform: translate(0, 0);
+  pointer-events: none;
+  position: fixed;
+  top: -6px;
+  left: -6px;
+  width: 16px;
+  height: 16px;
+  background: rgba(218, 58, 36, 0.75);
+  border-radius: 50%;
+  z-index: 100;
+  transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+}
+#cursor.hov_ {
+  top: -40px;
+  left: -40px;
+  width: 80px;
+  height: 80px;
+  background: rgba(218, 58, 36, 0.5);
+}

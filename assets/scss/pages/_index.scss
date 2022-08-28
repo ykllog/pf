@@ -1,4 +1,6 @@
-@forward "common";
-@forward "header";
-@forward "footer";
+@forward "component/header";
+@forward "component/footer";
+@forward "component/loading";
+@forward "component/cursor";
+
 @forward "top";

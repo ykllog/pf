@@ -1,0 +1,16 @@
+@use "sass:math";
+
+
+//*------------------*
+//*  z-index
+//*------------------*
+
+$layer: (
+  cursor: 100,
+  loading: 100,
+  loading_spinner: 105,
+);
+
+@mixin z-index($key) {
+  z-index: map-get($layer, $key);
+}

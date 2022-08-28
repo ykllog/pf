@@ -1,0 +1,35 @@
+@use '../../foundation' as fo;
+
+
+//*------------------*
+//*  cursor
+//*------------------*
+
+html,
+body,
+a,
+.cursorNone {
+  cursor: none;
+}
+
+#cursor {
+  transform: translate(0, 0);
+  pointer-events: none;
+  position: fixed;
+  top: -6px;
+  left: -6px;
+  width: 16px;
+  height: 16px;
+  background: rgba(fo.$color-accent01, .75);
+  border-radius: 50%;
+  @include fo.z-index(cursor);
+  transition: width .3s, height .3s, top .3s, left .3s;
+
+  &.hov_ {
+    top: -40px;
+    left: -40px;
+    width: 80px;
+    height: 80px;
+    background: rgba(fo.$color-accent01, .5);
+  }
+}
