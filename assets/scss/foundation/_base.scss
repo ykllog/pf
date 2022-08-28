@@ -5,12 +5,12 @@
 //*  color定義
 //*------------------*
 
-$color-default: #192643;
+$color-default: #313333;
 $color-light: #fff;
-$color-blue01: #18b7cd;
-$color-blue02: #1b8ef3;
-$color-blue03: #bbdbf3;
-$color-red: #da532c;
+$color-gray: #707070;
+$color-accent01: #DA3A24;
+$color-accent02: #D66841;
+$color-accent03: #FBEFEB;
 
 
 //*------------------*
@@ -91,10 +91,10 @@ textarea {
 }
 
 a {
-  color: $color-blue02;
+  color: $color-accent02;
 
   @include hover {
-    color: $color-blue03;
+    color: $color-accent03;
   }
 }
 
@@ -111,5 +111,5 @@ dt {
 }
 
 .colorRed {
-  color: $color-red;
+  color: $color-accent01;
 }

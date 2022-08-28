@@ -401,7 +401,7 @@ th {
 body {
   font-size: 1rem;
   font-family: "Noto Sans JP", sans-serif;
-  color: #192643;
+  color: #313333;
   background-color: #fff;
   line-height: 1;
   overflow-wrap: break-word;
@@ -428,16 +428,16 @@ textarea::-webkit-outer-spin-button {
 }
 
 a {
-  color: #1b8ef3;
+  color: #D66841;
 }
 @media (hover: hover) {
   a:hover {
-    color: #bbdbf3;
+    color: #FBEFEB;
   }
 }
 @media (hover: none) {
   a:active {
-    color: #bbdbf3;
+    color: #FBEFEB;
   }
 }
 
@@ -454,5 +454,5 @@ dt {
 }
 
 .colorRed {
-  color: #da532c;
+  color: #DA3A24;
 }

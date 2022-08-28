@@ -15,7 +15,190 @@
 </head>
 
 <body>
+
+  <div class="loading">
+    <div class="loading_spinner">
+      <div class="loading_cube1"></div>
+      <div class="loading_cube2"></div>
+    </div>
+  </div>
+
   <div class="wrapper" ontouchstart="">
+    <header class="header">
+      <div class="header_inner">
+        <h1 class="header_siteTitle">
+          <a href="./"><img src="./assets/images/siteLogo.svg" alt="キッポウ"></a>
+        </h1>
+
+        <div class="header_hamburger cursor">
+          <button class="header_hamburger_button cursor">
+            <span class="header_hamburger_line"></span>
+            <span class="header_hamburger_line"></span>
+            <span class="header_hamburger_line"></span>
+          </button>
+        </div>
+
+        <nav class="header_nav">
+          <ul class="header_nav_list">
+            <li class="header_nav_item"><a href="/#aboutme">about me</a></li>
+            <li class="header_nav_item"><a href="/#skills">skills</a></li>
+            <li class="header_nav_item"><a href="/#works">works</a></li>
+            <li class="header_nav_item"><a href="/#contact">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main indexMain">
+      <section class="indexMain_fv">
+        <p class="indexMain_fv_title">キッポウ</p>
+        <img src="./assets/images/siteIcon.svg" alt="">
+      </section>
+
+      <section class="indexMain_about" id="aboutme">
+        <div class="sectionTitle">
+          <h2 class="sectionTitle_main">about</h2>
+          <span class="sectionTitle_sub">わたしのこと</span>
+        </div>
+
+        <div class="about">
+          <figure class="about_pic">
+            <img src="./assets/images/about_photo.svg" alt="いとの顔写真">
+            <figcaption class="about_discription">
+              <h3>縁という糸を紡いで結び、<br>喜びの輪を広げたい。</h3>
+              <p>はじめまして。<br>キッポウという屋号でWebコーダーをしているいとです。</p>
+              <p>愛知県生まれの愛知県育ち。<br>
+                非常に内向的なオタクのため、細かなところにまでこだわってお仕事をしています。<br>
+                アルバイトを含めて通算七年の接客販売経験があり、クライアントと同じ視界を共有しながらのコミュニケーションには自信があります。</p>
+              <p>ゼロからイチを生み出すより、すでにあるイチを大切に育てるのが得意です。<br>皆様の熱い気持ちの籠ったWebサイト作成のお手伝い、ぜひわたしにさせてください。</p>
+            </figcaption>
+          </figure>
+          <div class="about_more"><a href="">いとについてもっと詳しく</a></div>
+        </div>
+      </section>
+
+
+      <section class="indexMain_skills" id="skills">
+        <div class="sectionTitle">
+          <h2 class="sectionTitle_main">skills</h2>
+          <span class="sectionTitle_sub">できること</span>
+        </div>
+
+        <div class="skills">
+          <div class="skills_item">
+            HTML｜CSS｜Sass<br>
+            JavaScript｜jQuery<br>
+            WordPress｜Git/GitHub
+          </div>
+
+          <ul class="skills_list">
+            <li class="skills_item">Sassやgulp、EJSを用いた効率的なコーディング</li>
+            <li class="skills_item">WordPressを用いたWebサイト制作</li>
+            <li class="skills_item">CSSやJavaScript（jQuery）を用いたアニメーション実装</li>
+            <li class="skills_item">レスポンシブ対応</li>
+          </ul>
+
+          <div class="skills_message">
+            <p>デザインを忠実に再現しつつ、W3Cのサイトで構造や記述に誤りがないかの確認を行うことで、正確で保守性の高いコーディングを日々追求しています。</p>
+            <p>また、デモサイト、本番環境共に実機確認を行い、スマートフォンやタブレットの画面サイズでも表示崩れのないように丁寧な作成を心掛けています。</p>
+            <p>画像の書き出しや各種値の取得など、コーディングの実務で必要なデザインツールの操作方法は一通り理解しています。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="indexMain_works" id="works">
+        <div class="sectionTitle">
+          <h2 class="sectionTitle_main">works</h2>
+          <span class="sectionTitle_sub">制作実例</span>
+        </div>
+
+        <article class="works">
+          <ul class="works_list">
+            <li class="works_item">
+              <a href="">
+                <figure>
+                  <img src="./assets/images/works_pf.png" alt="ポートフォリオの画像">
+                  <figcaption>
+                    <h3>ポートフォリオサイト</h3>
+                    <p>ポートフォリオサイトのデザイン・構築</p>
+                    <p>制作時間：　時間<br>使用技術：HTML/CSS/Sass/JavaScript/jQuery...<br>デザインカンプ：Adobe XD</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </li>
+
+            <li class="works_item">
+              <a href="">
+                <figure>
+                  <img src="./assets/images/works_narou.png" alt="なろう本文検索の画像">
+                  <figcaption>
+                    <h3>なろう本文検索</h3>
+                    <p>検索ツールのデザイン・構築</p>
+                    <p>制作時間：9時間<br>使用技術：HTML/CSS/Sass/JavaScript/jQuery...<br>デザインカンプ：Adobe XD</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="indexMain_contact" id="contact">
+        <div class="sectionTitle">
+          <h2 class="sectionTitle_main">contact</h2>
+          <span class="sectionTitle_sub">お問い合わせ</span>
+        </div>
+
+        <div class="contact">
+          <form class="contact_form">
+            <ul class="contact_list">
+              <li class="contact_item">
+                <label for="company">貴社名</label>
+                <input type="text" id="company" placeholder="キッポウ">
+              </li>
+              <li class="contact_item">
+                <label for="name">お名前<span class="contact_item_required">*</span></label>
+                <input type="text" id="name" placeholder="伊藤宏恵" required>
+              </li>
+              <li class="contact_item">
+                <label for="mail">メールアドレス<span class="contact_item_required">*</span></label>
+                <input type="email" id="mail" placeholder="sample@example.com" required>
+              </li>
+              <li class="contact_item">
+                <label for="message">メッセージ</label>
+                <textarea type="text" id="message" placeholder="問い合わせ内容を入力してください。" required></textarea>
+              </li>
+            </ul>
+            <input type="submit" class="contact_submit" value="送信する">
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer_inner">
+        <div class="address">
+          <ul class="address_list">
+            <li class="address_item">
+              <a href="https://twitter.com/ykllog" target="_blank" rel="noopener noreferrer"
+                class="address_item_link --twitter"><img src="./assets/images/address_twitter.svg" alt="Twitter"></a>
+            </li>
+            <li class="address_item">
+              <a href="https://github.com/ykllog" target="_blank" rel="noopener noreferrer"
+                class="address_item_link --github"><img src="./assets/images/address_github.svg" alt="GitHub"></a>
+            </li>
+            <li class="address_item">
+              <a href="https://blog.ykllog.com" target="_blank" rel="noopener noreferrer"
+                class="address_item_link --blog"><img src="./assets/images/address_wordpress.svg" alt="Blog"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="pageTop">
+          <a href="#"><img src="./assets/images/pageTop.svg" alt="ページ上部へ戻る"></a>
+        </div>
+        <small class="copyright">&copy; 2022 キッポウ</small>
+      </div>
+    </footer>
 
   </div>
 
