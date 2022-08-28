@@ -7,6 +7,10 @@
 
 .indexMain_section {
   margin-bottom: 150px;
+
+  @include fo.sm-layout {
+    margin-bottom: 50px;
+  }
 }
 
 
@@ -197,6 +201,73 @@
       p {
         line-height: 1.5;
         margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+
+//*------------------*
+//*  works
+//*------------------*
+
+.indexMain_works {
+  .works {
+    &_list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include fo.sm-layout {
+        display: block;
+      }
+    }
+
+    &_item {
+      width: 48%;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(fo.$color-gray, .5);
+
+      &:nth-child(2n + 1) {
+        margin-right: 4%;
+      }
+
+      @include fo.sm-layout {
+        width: 100%;
+
+        &:nth-child(2n + 1) {
+          margin-right: 0;
+          margin-bottom: 50px;
+        }
+      }
+
+      a {
+        color: fo.$color-default;
+
+        figure {
+          img {
+            border-radius: 15px 15px 0 0;
+          }
+
+          figcaption {
+            padding: 15px 2.5%;
+
+            h3 {
+              color: fo.$color-accent01;
+              font-size: fo.rem(20);
+              font-weight: bold;
+              margin-bottom: 5px;
+            }
+
+            p:not(:last-child) {
+              margin-bottom: 15px;
+            }
+
+            p:last-child {
+              font-size: fo.rem(12);
+            }
+          }
+        }
       }
     }
   }

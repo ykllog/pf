@@ -471,6 +471,11 @@ dt {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 400px) {
+  .sectionTitle {
+    margin-bottom: 75px;
+  }
+}
 .sectionTitle_main {
   font-size: 3.125rem;
   font-weight: bold;
@@ -793,6 +798,11 @@ a,
 .indexMain_section {
   margin-bottom: 150px;
 }
+@media screen and (max-width: 400px) {
+  .indexMain_section {
+    margin-bottom: 50px;
+  }
+}
 
 .indexMain_fv {
   width: 100%;
@@ -952,4 +962,53 @@ a,
 .indexMain_skills .skills_message p {
   line-height: 1.5;
   margin-bottom: 1rem;
+}
+
+.indexMain_works .works_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 400px) {
+  .indexMain_works .works_list {
+    display: block;
+  }
+}
+.indexMain_works .works_item {
+  width: 48%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(112, 112, 112, 0.5);
+}
+.indexMain_works .works_item:nth-child(2n+1) {
+  margin-right: 4%;
+}
+@media screen and (max-width: 400px) {
+  .indexMain_works .works_item {
+    width: 100%;
+  }
+  .indexMain_works .works_item:nth-child(2n+1) {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+.indexMain_works .works_item a {
+  color: #313333;
+}
+.indexMain_works .works_item a figure img {
+  border-radius: 15px 15px 0 0;
+}
+.indexMain_works .works_item a figure figcaption {
+  padding: 15px 2.5%;
+}
+.indexMain_works .works_item a figure figcaption h3 {
+  color: #DA3A24;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.indexMain_works .works_item a figure figcaption p:not(:last-child) {
+  margin-bottom: 15px;
+}
+.indexMain_works .works_item a figure figcaption p:last-child {
+  font-size: 0.75rem;
 }
