@@ -57,7 +57,7 @@ if (splash_text != myYear + myMonth + myDate) {
 $(function () {
   let $win = $(window),
     $fv = $('.indexMain_fv'),
-    $header = $('.header'),
+    $header = $('.indexHeader'),
     fvHeight = $fv.outerHeight(),
     fixedClass = 'fixed';
   $win.on('load scroll', function () {

@@ -503,9 +503,6 @@ dt {
     background-color: #fff;
   }
 }
-.header.fixed .header_siteTitle {
-  visibility: visible;
-}
 .header_inner {
   display: flex;
   flex-direction: row;
@@ -520,7 +517,6 @@ dt {
   }
 }
 .header_siteTitle {
-  visibility: hidden;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -625,6 +621,13 @@ dt {
   .header_nav.open {
     display: block;
   }
+}
+
+.indexHeader.fixed .header_siteTitle {
+  visibility: visible;
+}
+.indexHeader .header_siteTitle {
+  visibility: hidden;
 }
 
 .footer {
