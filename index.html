@@ -26,10 +26,10 @@
   </div>
 
   <div class="wrapper" ontouchstart="">
-    <header class="header">
+    <header class="header indexHeader">
       <div class="header_inner maxWidth">
         <h1 class="header_siteTitle">
-          <a href="./"><img src="./assets/images/siteLogo.svg" alt="キッポウ"></a>
+          <a href="./"><img src="./assets/images/header_logo.svg" alt="キッポウ"></a>
         </h1>
 
         <div class="header_hamburger">
@@ -79,7 +79,7 @@
       <section class="indexMain_section indexMain_about" id="aboutme">
         <div class="indexMain_about_inner maxWidth">
           <div class="sectionTitle">
-            <h2 class="sectionTitle_main">about</h2>
+            <h2 class="sectionTitle_main">about me</h2>
             <span class="sectionTitle_sub">わたしのこと</span>
           </div>
 
@@ -95,7 +95,7 @@
                     アルバイトを含めて通算七年の接客販売経験があり、クライアントと同じ視界を共有しながらのコミュニケーションには自信があります。</p>
                   <p>ゼロからイチを生み出すより、すでにあるイチを大切に育てるのが得意です。<br>皆様の熱い気持ちの籠ったWebサイト作成のお手伝い、ぜひわたしにさせてください。</p>
                 </div>
-                <div class="about_discription_more"><a href="">いとについてもっと詳しく</a></div>
+                <div class="about_discription_more"><a href="./about/">いとについてもっと詳しく</a></div>
               </figcaption>
             </figure>
           </div>
@@ -139,29 +139,35 @@
         <article class="works maxWidth">
           <ul class="works_list">
             <li class="works_item">
-              <a href="">
-                <figure>
-                  <img src="./assets/images/works_pf.png" alt="ポートフォリオの画像">
-                  <figcaption>
-                    <h3>ポートフォリオサイト</h3>
-                    <p>ポートフォリオサイトのデザイン・構築</p>
-                    <p>制作時間：　時間<br>使用技術：HTML/CSS/Sass/JavaScript/jQuery...<br>デザインカンプ：Adobe XD</p>
-                  </figcaption>
-                </figure>
-              </a>
+              <figure>
+                <img src="./assets/images/works_pf.png" alt="ポートフォリオの画像">
+                <figcaption>
+                  <h3 class="works_item_title">ポートフォリオサイト</h3>
+                  <p class="works_item_comment">ポートフォリオサイトのデザイン・構築</p>
+                  <p class="works_item_description">制作時間：　時間<br>使用技術：HTML/CSS/Sass/JavaScript/jQuery...<br>デザインカンプ：Adobe
+                    XD</p>
+                  <div class="works_item_link">
+                    <a href="./" target="_blank" rel="noopener noreferrer">Webサイト</a>
+                    <a href="https://github.com/ykllog/pf" target="_blank" rel="noopener noreferrer">ソースコード</a>
+                  </div>
+                </figcaption>
+              </figure>
             </li>
 
             <li class="works_item">
-              <a href="">
-                <figure>
-                  <img src="./assets/images/works_narou.png" alt="なろう本文検索の画像">
-                  <figcaption>
-                    <h3>なろう本文検索</h3>
-                    <p>検索ツールのデザイン・構築</p>
-                    <p>制作時間：9時間<br>使用技術：HTML/CSS/Sass/JavaScript/jQuery...<br>デザインカンプ：Adobe XD</p>
-                  </figcaption>
-                </figure>
-              </a>
+              <figure>
+                <img src="./assets/images/works_narou.png" alt="なろう本文検索の画像">
+                <figcaption>
+                  <h3 class="works_item_title">なろう本文検索</h3>
+                  <p class="works_item_comment">検索ツールのデザイン・構築</p>
+                  <p class="works_item_description">制作時間：9時間<br>使用技術：HTML/CSS/Sass/JavaScript/jQuery...<br>デザインカンプ：Adobe
+                    XD</p>
+                  <div class="works_item_link">
+                    <a href="https://narou.ykllog.com" target="_blank" rel="noopener noreferrer">Webサイト</a>
+                    <a href="https://github.com/ykllog/narou" target="_blank" rel="noopener noreferrer">ソースコード</a>
+                  </div>
+                </figcaption>
+              </figure>
             </li>
           </ul>
         </article>
@@ -247,9 +253,9 @@
         <small class="copyright">&copy; 2022 キッポウ</small>
       </div>
     </footer>
-
-    <div id="cursor"></div>
   </div>
+
+  <div id="cursor"></div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>

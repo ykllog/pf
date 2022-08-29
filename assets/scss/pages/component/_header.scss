@@ -18,12 +18,6 @@
     background-color: fo.$color-light;
   }
 
-  &.fixed {
-    .header_siteTitle {
-      visibility: visible;
-    }
-  }
-
   &_inner {
     display: flex;
     flex-direction: row;
@@ -38,7 +32,6 @@
   }
 
   &_siteTitle {
-    visibility: hidden;
     width: fit-content;
     height: 50px;
 
@@ -152,5 +145,17 @@
         display: block;
       }
     }
+  }
+}
+
+.indexHeader {
+  &.fixed {
+    .header_siteTitle {
+      visibility: visible;
+    }
+  }
+
+  .header_siteTitle {
+    visibility: hidden;
   }
 }
