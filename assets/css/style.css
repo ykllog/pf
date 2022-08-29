@@ -1026,12 +1026,13 @@ a,
 }
 .indexMain_about .about_pic img {
   display: block;
-  width: 90%;
+  width: 45%;
   max-width: 450px;
   margin-right: 50px;
 }
 @media screen and (max-width: 768px) {
   .indexMain_about .about_pic img {
+    width: 90%;
     margin: 0 auto 75px;
   }
 }
@@ -1316,12 +1317,13 @@ a,
 }
 .pageAbout_description_content img {
   display: block;
-  width: 90%;
+  width: 45%;
   max-width: 450px;
   margin-right: 50px;
 }
 @media screen and (max-width: 768px) {
   .pageAbout_description_content img {
+    width: 90%;
     margin: 0 auto 75px;
   }
 }

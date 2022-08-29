@@ -80,11 +80,12 @@
 
     img {
       display: block;
-      width: 90%;
+      width: 45%;
       max-width: 450px;
       margin-right: 50px;
 
       @include fo.tb-layout {
+        width: 90%;
         margin: 0 auto 75px;
       }
     }
