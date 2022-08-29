@@ -240,31 +240,50 @@
         }
       }
 
-      a {
-        color: fo.$color-default;
+      figure {
+        img {
+          border-radius: 15px 15px 0 0;
+        }
 
-        figure {
-          img {
-            border-radius: 15px 15px 0 0;
-          }
+        figcaption {
+          padding: 15px 2.5%;
+        }
+      }
 
-          figcaption {
-            padding: 15px 2.5%;
+      &_title {
+        color: fo.$color-accent01;
+        font-size: fo.rem(20);
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
 
-            h3 {
-              color: fo.$color-accent01;
-              font-size: fo.rem(20);
-              font-weight: bold;
-              margin-bottom: 5px;
-            }
+      &_comment {
+        margin-bottom: 15px;
+      }
 
-            p:not(:last-child) {
-              margin-bottom: 15px;
-            }
+      &_description {
+        font-size: fo.rem(12);
+        margin-bottom: 30px;
+      }
 
-            p:last-child {
-              font-size: fo.rem(12);
-            }
+      &_link {
+        text-align: right;
+
+        a {
+          display: inline-flex;
+          width: 150px;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
+          border: 2px dashed fo.$color-accent01;
+          border-radius: 5px;
+          margin-top: 15px;
+          margin-left: 20px;
+
+          @include fo.hover {
+            color: fo.$color-light;
+            background-color: fo.$color-accent02;
+            opacity: 1;
           }
         }
       }
