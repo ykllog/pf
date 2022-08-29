@@ -1228,3 +1228,28 @@ a,
     opacity: 0.5;
   }
 }
+
+.pageAbout_mv {
+  width: 100%;
+  height: 60vh;
+  background: url(../images/about_mv.png) center center/cover no-repeat;
+}
+.pageAbout_mv_inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pageAbout_mv_title {
+  font-size: 3.125rem;
+  font-weight: bold;
+  letter-spacing: 1.5;
+  color: #707070;
+}
+.pageAbout_mv_subTitle {
+  font-weight: bold;
+  letter-spacing: 1.5;
+  color: #DA3A24;
+}
