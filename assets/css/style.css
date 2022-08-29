@@ -1249,6 +1249,12 @@ a,
   width: 100%;
   height: 60vh;
   background: url(../images/about_mv.png) center center/cover no-repeat;
+  margin-bottom: 150px;
+}
+@media screen and (max-width: 400px) {
+  .pageAbout_mv {
+    margin-bottom: 50px;
+  }
 }
 .pageAbout_mv_inner {
   width: 100%;
@@ -1268,4 +1274,100 @@ a,
   font-weight: bold;
   letter-spacing: 1.5;
   color: #DA3A24;
+}
+
+.pageAbout_description {
+  margin-bottom: 150px;
+}
+@media screen and (max-width: 400px) {
+  .pageAbout_description {
+    margin-bottom: 50px;
+  }
+}
+.pageAbout_description_title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 1.5;
+  color: #DA3A24;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 400px) {
+  .pageAbout_description_title {
+    margin-bottom: 75px;
+  }
+}
+.pageAbout_description_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 768px) {
+  .pageAbout_description_content {
+    display: block;
+  }
+}
+@media screen and (max-width: 400px) {
+  .pageAbout_description_content {
+    margin-bottom: 75px;
+  }
+}
+.pageAbout_description_content img {
+  display: block;
+  width: 90%;
+  max-width: 450px;
+  margin-right: 50px;
+}
+@media screen and (max-width: 768px) {
+  .pageAbout_description_content img {
+    margin: 0 auto 75px;
+  }
+}
+.pageAbout_description_text p:not(:last-child) {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.pageAbout_description_subContent div dd {
+  line-height: 2;
+}
+.pageAbout_description_subContent div dd p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.pageAbout_description_subContent div:not(:last-child) {
+  margin-bottom: 100px;
+}
+.pageAbout_description_subContent div:first-child dt {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #DA3A24;
+  background-color: #FBEFEB;
+  border-radius: 5px;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  line-height: 60px;
+}
+.pageAbout_description_subContent div:not(:first-child) dt {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #DA3A24;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  line-height: 30px;
+  position: relative;
+}
+.pageAbout_description_subContent div:not(:first-child) dt::before {
+  content: "";
+  width: 10px;
+  height: 30px;
+  background: url(../images/title_accent.svg) no-repeat center center/contain;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
