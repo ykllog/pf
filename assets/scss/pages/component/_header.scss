@@ -159,3 +159,7 @@
     visibility: hidden;
   }
 }
+
+.header.open + body.noScroll {
+  overflow: hidden;
+}
