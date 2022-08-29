@@ -1,0 +1,62 @@
+@use 'base' as fo;
+
+
+//*------------------*
+//*  z-index
+//*------------------*
+
+$layer: (
+  header: 10,
+  hamburger: 15,
+  fv_logo: -1,
+  cursor: 100,
+  loading: 100,
+  loading_spinner: 105,
+);
+
+@mixin z-index($key) {
+  z-index: map-get($layer, $key);
+}
+
+
+//*------------------*
+//*  要素共通最大幅
+//*------------------*
+
+.maxWidth {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+//*------------------*
+//*  要素共通タイトル
+//*------------------*
+
+.sectionTitle {
+  margin-bottom: 100px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include fo.sm-layout {
+    margin-bottom: 75px;
+  }
+
+  &_main {
+    font-size: fo.rem(50);
+    font-weight: bold;
+    letter-spacing: 1.5;
+    color: fo.$color-accent03;
+  }
+
+  &_sub {
+    margin-top: -1rem;
+    font-weight: bold;
+    letter-spacing: 1.5;
+    color: fo.$color-accent01;
+  }
+}

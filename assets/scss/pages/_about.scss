@@ -1,0 +1,156 @@
+@use '../foundation' as fo;
+
+
+//*------------------*
+//*  mv
+//*------------------*
+
+.pageAbout_mv {
+  width: 100%;
+  height: 60vh;
+  background: url(../images/about_mv.png) center center / cover no-repeat;
+  margin-bottom: 150px;
+
+  @include fo.sm-layout {
+    margin-bottom: 50px;
+  }
+
+  &_inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_title {
+    font-size: fo.rem(50);
+    font-weight: bold;
+    letter-spacing: 1.5;
+    color: fo.$color-gray;
+  }
+
+  &_subTitle {
+    font-weight: bold;
+    letter-spacing: 1.5;
+    color: fo.$color-accent01;
+  }
+}
+
+
+//*------------------*
+//*  description
+//*------------------*
+
+.pageAbout_description {
+  margin-bottom: 150px;
+
+  @include fo.sm-layout {
+    margin-bottom: 50px;
+  }
+
+  &_title {
+    text-align: center;
+    font-size: fo.rem(28);
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 1.5;
+    color: fo.$color-accent01;
+    margin-bottom: 100px;
+
+    @include fo.sm-layout {
+      margin-bottom: 75px;
+    }
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 100px;
+
+    @include fo.tb-layout {
+      display: block;
+    }
+
+    @include fo.sm-layout {
+      margin-bottom: 75px;
+    }
+
+    img {
+      display: block;
+      width: 45%;
+      max-width: 450px;
+      margin-right: 50px;
+
+      @include fo.tb-layout {
+        width: 90%;
+        margin: 0 auto 75px;
+      }
+    }
+  }
+
+  &_text {
+    p:not(:last-child) {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  &_subContent {
+    div {
+      dd {
+        line-height: 2;
+
+        p:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 100px;
+      }
+
+      &:first-child {
+        dt {
+          font-size: fo.rem(20);
+          font-weight: bold;
+          color: fo.$color-accent01;
+          background-color: fo.$color-accent03;
+          border-radius: 5px;
+          width: 100%;
+          height: 60px;
+          margin-bottom: 2rem;
+          padding-left: 2rem;
+          line-height: 60px;
+        }
+      }
+
+      &:not(:first-child) {
+        dt {
+          font-size: fo.rem(20);
+          font-weight: bold;
+          color: fo.$color-accent01;
+          width: 100%;
+          height: 30px;
+          margin-bottom: 2rem;
+          padding-left: 2rem;
+          line-height: 30px;
+          position: relative;
+
+          &::before {
+            content: '';
+            width: 10px;
+            height: 30px;
+            background: url(../images/title_accent.svg) no-repeat center center / contain;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+}

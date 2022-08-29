@@ -2,5 +2,377 @@
 
 
 //*------------------*
-//*  top
+//*  共通部分
 //*------------------*
+
+.indexMain_section {
+  margin-bottom: 150px;
+
+  @include fo.sm-layout {
+    margin-bottom: 50px;
+  }
+}
+
+
+//*------------------*
+//*  fv
+//*------------------*
+
+.indexMain_fv {
+  width: 100%;
+  height: 100vh;
+
+  @include fo.sm-layout {
+    height: 60vh;
+    margin-top: 10vh;
+  }
+
+  &_inner {
+    width: 95%;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_content {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+  }
+
+  &_copy {
+    height: 100%;
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include fo.sm-layout {
+      padding-bottom: 0;
+      justify-content: center;
+    }
+
+    .--sub {
+      color: fo.$color-accent02;
+      font-size: fo.rem(28);
+      line-height: 1.5;
+      margin-bottom: 30px;
+
+      @include fo.sm-layout {
+        font-size: fo.rem(20);
+      }
+    }
+
+    .--title {
+      width: 350px;
+
+      @include fo.sm-layout {
+        width: 250px;
+      }
+    }
+  }
+
+  &_logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include fo.z-index(fv_logo);
+
+    @include fo.sm-layout {
+      top: 50%;
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    svg {
+      width: auto;
+      height: 60vh;
+
+      @include fo.sm-layout {
+        width: 90vw;
+        height: auto;
+      }
+
+      path,
+      circle {
+        fill: fo.$color-accent03;
+      }
+    }
+  }
+}
+
+
+//*------------------*
+//*  about
+//*------------------*
+
+.indexMain_about {
+  .about {
+    &_pic {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include fo.tb-layout {
+        display: block;
+      }
+
+      img {
+        display: block;
+        width: 45%;
+        max-width: 450px;
+        margin-right: 50px;
+
+        @include fo.tb-layout {
+          width: 90%;
+          margin: 0 auto 75px;
+        }
+      }
+    }
+
+    &_discription {
+      &_title {
+        font-size: fo.rem(28);
+        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: 1.5;
+        color: fo.$color-accent01;
+        margin-bottom: 50px;
+      }
+
+      &_text {
+        line-height: 1.5;
+        margin-bottom: 75px;
+
+        p:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      &_more a {
+        display: block;
+        width: 320px;
+        height: 50px;
+        margin: 0 0 0 auto;
+        padding-left: 30px;
+        background: url(../images/moreLink.svg) no-repeat center bottom / contain;
+      }
+    }
+  }
+}
+
+
+//*------------------*
+//*  skills
+//*------------------*
+
+.indexMain_skills {
+  .skills {
+    &_menu {
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: fo.$color-accent03;
+      text-align: center;
+      margin-bottom: 50px;
+      padding: 2rem 0;
+      line-height: 2;
+    }
+
+    &_list {
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      padding-left: 1rem;
+      line-height: 2;
+      list-style-type: disc;
+    }
+
+    &_message {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+
+      p {
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+
+//*------------------*
+//*  works
+//*------------------*
+
+.indexMain_works {
+  .works {
+    &_list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include fo.sm-layout {
+        display: block;
+      }
+    }
+
+    &_item {
+      width: 48%;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(fo.$color-gray, .5);
+
+      &:nth-child(2n + 1) {
+        margin-right: 4%;
+      }
+
+      @include fo.sm-layout {
+        width: 100%;
+
+        &:nth-child(2n + 1) {
+          margin-right: 0;
+          margin-bottom: 50px;
+        }
+      }
+
+      figure {
+        img {
+          border-radius: 15px 15px 0 0;
+        }
+
+        figcaption {
+          padding: 15px 2.5%;
+        }
+      }
+
+      &_title {
+        color: fo.$color-accent01;
+        font-size: fo.rem(20);
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      &_comment {
+        margin-bottom: 15px;
+      }
+
+      &_description {
+        font-size: fo.rem(12);
+        margin-bottom: 30px;
+      }
+
+      &_link {
+        text-align: right;
+
+        a {
+          display: inline-flex;
+          width: 150px;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
+          border: 2px dashed fo.$color-accent01;
+          border-radius: 5px;
+          margin-top: 15px;
+          margin-left: 20px;
+
+          @include fo.hover {
+            color: fo.$color-light;
+            background-color: fo.$color-accent02;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//*------------------*
+//*  contact
+//*------------------*
+
+.indexMain_contact {
+  .contact {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    &_message {
+      line-height: 1.5;
+      margin-bottom: 50px;
+    }
+
+    &_item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      line-height: 2;
+      margin-bottom: 30px;
+
+      @include fo.tb-layout {
+        display: block;
+      }
+
+      &:last-child {
+        margin-bottom: 50px;
+      }
+
+      label {
+        width: 300px;
+        display: block;
+        cursor: none;
+
+        @include fo.tb-layout {
+          width: 100%;
+          margin-bottom: .5rem;
+        }
+      }
+
+      input,
+      textarea {
+        width: calc(100% - 300px);
+        padding: .5rem 1rem;
+
+        @include fo.tb-layout {
+          width: 100%;
+        }
+      }
+
+      input {
+        height: 3rem;
+        border-bottom: 1px solid fo.$color-default;
+      }
+
+      textarea {
+        height: 10rem;
+        resize: vertical;
+        border: 1px solid fo.$color-default;
+      }
+
+      ::placeholder {
+        color: rgba(fo.$color-gray, .5);
+      }
+    }
+
+    &_submit {
+      width: 300px;
+      height: 3rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: fo.$color-light;
+      background-color: fo.$color-accent02;
+
+      @include fo.hover {
+        opacity: .5;
+      }
+    }
+  }
+}
