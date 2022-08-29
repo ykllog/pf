@@ -904,6 +904,22 @@ a,
   }
 }
 
+.bread {
+  font-size: 0.75rem;
+}
+.bread_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bread_item:not(:last-child) {
+  margin-right: 10px;
+}
+.bread_item:not(:last-child):after {
+  content: ">";
+  margin-left: 10px;
+}
+
 .indexMain_section {
   margin-bottom: 150px;
 }
