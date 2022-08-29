@@ -449,10 +449,6 @@ dt {
   display: inline-block;
 }
 
-.noScroll {
-  overflow: hidden;
-}
-
 .colorRed {
   color: #DA3A24;
 }
@@ -628,6 +624,10 @@ dt {
 }
 .indexHeader .header_siteTitle {
   visibility: hidden;
+}
+
+.header.open + body.noScroll {
+  overflow: hidden;
 }
 
 .footer {
