@@ -475,13 +475,13 @@ dt {
 .sectionTitle_main {
   font-size: 3.125rem;
   font-weight: bold;
-  letter-spacing: 1.5;
+  letter-spacing: 0.25rem;
   color: #FBEFEB;
 }
 .sectionTitle_sub {
   margin-top: -1rem;
   font-weight: bold;
-  letter-spacing: 1.5;
+  letter-spacing: 0.25rem;
   color: #DA3A24;
 }
 
@@ -1045,9 +1045,14 @@ a,
   font-size: 1.75rem;
   font-weight: bold;
   line-height: 1.5;
-  letter-spacing: 1.5;
+  letter-spacing: 0.5rem;
   color: #DA3A24;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 400px) {
+  .indexMain_about .about_discription_title {
+    letter-spacing: 0;
+  }
 }
 .indexMain_about .about_discription_text {
   line-height: 1.5;
@@ -1242,6 +1247,7 @@ a,
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: #fff;
   background-color: #D66841;
 }
@@ -1278,12 +1284,12 @@ a,
 .pageAbout_mv_title {
   font-size: 3.125rem;
   font-weight: bold;
-  letter-spacing: 1.5;
+  letter-spacing: 0.25rem;
   color: #707070;
 }
 .pageAbout_mv_subTitle {
   font-weight: bold;
-  letter-spacing: 1.5;
+  letter-spacing: 0.25rem;
   color: #DA3A24;
 }
 
@@ -1300,12 +1306,13 @@ a,
   font-size: 1.75rem;
   font-weight: bold;
   line-height: 1.5;
-  letter-spacing: 1.5;
+  letter-spacing: 0.5rem;
   color: #DA3A24;
   margin-bottom: 100px;
 }
 @media screen and (max-width: 400px) {
   .pageAbout_description_title {
+    letter-spacing: 0;
     margin-bottom: 75px;
   }
 }

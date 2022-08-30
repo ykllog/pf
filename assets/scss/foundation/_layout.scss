@@ -49,14 +49,14 @@ $layer: (
   &_main {
     font-size: fo.rem(50);
     font-weight: bold;
-    letter-spacing: 1.5;
+    letter-spacing: 0.25rem;
     color: fo.$color-accent03;
   }
 
   &_sub {
     margin-top: -1rem;
     font-weight: bold;
-    letter-spacing: 1.5;
+    letter-spacing: 0.25rem;
     color: fo.$color-accent01;
   }
 }
