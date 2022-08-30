@@ -27,16 +27,19 @@
 
     @include fo.tb-layout {
       display: block;
-      padding: 10px 0 0;
+      padding: 10px 0;
     }
   }
 
   &_siteTitle {
-    width: fit-content;
-    height: 50px;
+    width: 225px;
+    height: auto;
 
     @include fo.sm-layout {
-      height: 30px;
+      width: 150px;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -55,7 +58,7 @@
         @include fo.z-index(hamburger);
 
         @include fo.sm-layout {
-          top: 10px;
+          top: 13px;
           width: 30px;
         }
       }
@@ -162,4 +165,8 @@
 
 .header.open + body.noScroll {
   overflow: hidden;
+}
+
+body.noScroll .indexHeader .header_siteTitle {
+  visibility: visible;
 }
