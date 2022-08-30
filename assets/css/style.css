@@ -1096,29 +1096,21 @@ a,
 
 .indexMain_works .works_list {
   display: flex;
-  flex-direction: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
-}
-@media screen and (max-width: 400px) {
-  .indexMain_works .works_list {
-    display: block;
-  }
+  gap: 4%;
 }
 .indexMain_works .works_item {
-  width: 400px;
+  width: 48%;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(112, 112, 112, 0.5);
   display: flex;
 }
-.indexMain_works .works_item:nth-child(2n+1) {
-  margin-right: 4%;
-}
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px) {
   .indexMain_works .works_item {
     width: 100%;
   }
-  .indexMain_works .works_item:nth-child(2n+1) {
-    margin-right: 0;
+  .indexMain_works .works_item:not(:last-child) {
     margin-bottom: 50px;
   }
 }

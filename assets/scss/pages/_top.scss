@@ -215,12 +215,9 @@
   .works {
     &_list {
       display: flex;
-      flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-between;
-
-      @include fo.sm-layout {
-        display: block;
-      }
+      gap: 4%;
     }
 
     &_item {
@@ -229,15 +226,10 @@
       box-shadow: 0 0 10px rgba(fo.$color-gray, .5);
       display: flex;
 
-      &:nth-child(2n + 1) {
-        margin-right: 4%;
-      }
-
-      @include fo.sm-layout {
+      @include fo.tb-layout {
         width: 100%;
 
-        &:nth-child(2n + 1) {
-          margin-right: 0;
+        &:not(:last-child) {
           margin-bottom: 50px;
         }
       }
