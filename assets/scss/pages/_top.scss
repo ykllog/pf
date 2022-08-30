@@ -139,9 +139,13 @@
         font-size: fo.rem(28);
         font-weight: bold;
         line-height: 1.5;
-        letter-spacing: 1.5;
+        letter-spacing: 0.5rem;
         color: fo.$color-accent01;
         margin-bottom: 50px;
+
+        @include fo.sm-layout {
+          letter-spacing: 0;
+        }
       }
 
       &_text {
@@ -215,38 +219,41 @@
   .works {
     &_list {
       display: flex;
-      flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-between;
-
-      @include fo.sm-layout {
-        display: block;
-      }
+      gap: 4%;
     }
 
     &_item {
       width: 48%;
       border-radius: 15px;
       box-shadow: 0 0 10px rgba(fo.$color-gray, .5);
+      display: flex;
 
-      &:nth-child(2n + 1) {
-        margin-right: 4%;
-      }
-
-      @include fo.sm-layout {
+      @include fo.tb-layout {
         width: 100%;
 
-        &:nth-child(2n + 1) {
-          margin-right: 0;
+        &:not(:last-child) {
           margin-bottom: 50px;
         }
       }
 
       figure {
+        display: flex;
+        flex-direction: column;
+
         img {
+          display: block;
+          width: 100%;
+          height: auto;
           border-radius: 15px 15px 0 0;
         }
 
         figcaption {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          height: 100%;
           padding: 15px 2.5%;
         }
       }
@@ -268,6 +275,7 @@
       }
 
       &_link {
+        margin-top: auto;
         text-align: right;
 
         a {
@@ -367,6 +375,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: center;
       color: fo.$color-light;
       background-color: fo.$color-accent02;
 

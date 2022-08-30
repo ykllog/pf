@@ -27,13 +27,13 @@
   &_title {
     font-size: fo.rem(50);
     font-weight: bold;
-    letter-spacing: 1.5;
+    letter-spacing: 0.25rem;
     color: fo.$color-gray;
   }
 
   &_subTitle {
     font-weight: bold;
-    letter-spacing: 1.5;
+    letter-spacing: 0.25rem;
     color: fo.$color-accent01;
   }
 }
@@ -55,11 +55,12 @@
     font-size: fo.rem(28);
     font-weight: bold;
     line-height: 1.5;
-    letter-spacing: 1.5;
+    letter-spacing: 0.5rem;
     color: fo.$color-accent01;
     margin-bottom: 100px;
 
     @include fo.sm-layout {
+      letter-spacing: 0;
       margin-bottom: 75px;
     }
   }
