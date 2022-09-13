@@ -143,6 +143,10 @@
         color: fo.$color-accent01;
         margin-bottom: 50px;
 
+        @include fo.tb-layout {
+          letter-spacing: 0.15rem;
+        }
+
         @include fo.sm-layout {
           letter-spacing: 0;
         }
