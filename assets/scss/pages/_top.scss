@@ -143,6 +143,10 @@
         color: fo.$color-accent01;
         margin-bottom: 50px;
 
+        @include fo.tb-layout {
+          letter-spacing: 0.15rem;
+        }
+
         @include fo.sm-layout {
           letter-spacing: 0;
         }
@@ -221,7 +225,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 4%;
+      gap: 50px 4%;
     }
 
     &_item {
@@ -232,10 +236,6 @@
 
       @include fo.tb-layout {
         width: 100%;
-
-        &:not(:last-child) {
-          margin-bottom: 50px;
-        }
       }
 
       figure {
@@ -271,6 +271,12 @@
 
       &_description {
         font-size: fo.rem(12);
+        margin-bottom: 30px;
+      }
+
+      &_pw {
+        font-size: fo.rem(12);
+        margin-top: -15px;
         margin-bottom: 30px;
       }
 

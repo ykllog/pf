@@ -1049,6 +1049,11 @@ a,
   color: #DA3A24;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 768px) {
+  .indexMain_about .about_discription_title {
+    letter-spacing: 0.15rem;
+  }
+}
 @media screen and (max-width: 400px) {
   .indexMain_about .about_discription_title {
     letter-spacing: 0;
@@ -1103,7 +1108,7 @@ a,
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 4%;
+  gap: 50px 4%;
 }
 .indexMain_works .works_item {
   width: 48%;
@@ -1114,9 +1119,6 @@ a,
 @media screen and (max-width: 768px) {
   .indexMain_works .works_item {
     width: 100%;
-  }
-  .indexMain_works .works_item:not(:last-child) {
-    margin-bottom: 50px;
   }
 }
 .indexMain_works .works_item figure {
@@ -1147,6 +1149,11 @@ a,
 }
 .indexMain_works .works_item_description {
   font-size: 0.75rem;
+  margin-bottom: 30px;
+}
+.indexMain_works .works_item_pw {
+  font-size: 0.75rem;
+  margin-top: -15px;
   margin-bottom: 30px;
 }
 .indexMain_works .works_item_link {
@@ -1310,6 +1317,11 @@ a,
   color: #DA3A24;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 768px) {
+  .pageAbout_description_title {
+    letter-spacing: 0.15rem;
+  }
+}
 @media screen and (max-width: 400px) {
   .pageAbout_description_title {
     letter-spacing: 0;
@@ -1344,9 +1356,14 @@ a,
     margin: 0 auto 75px;
   }
 }
+.pageAbout_description_text {
+  line-height: 1.75;
+}
 .pageAbout_description_text p:not(:last-child) {
   margin-bottom: 1rem;
-  line-height: 1.5;
+}
+.pageAbout_description_text rt {
+  color: #D66841;
 }
 .pageAbout_description_subContent div dd {
   line-height: 2;

@@ -59,6 +59,10 @@
     color: fo.$color-accent01;
     margin-bottom: 100px;
 
+    @include fo.tb-layout {
+      letter-spacing: 0.15rem;
+    }
+
     @include fo.sm-layout {
       letter-spacing: 0;
       margin-bottom: 75px;
@@ -93,9 +97,14 @@
   }
 
   &_text {
+    line-height: 1.75;
+
     p:not(:last-child) {
       margin-bottom: 1rem;
-      line-height: 1.5;
+    }
+
+    rt {
+      color: fo.$color-accent02;
     }
   }
 
